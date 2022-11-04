@@ -1,9 +1,49 @@
 import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import { User, Financial, Progress, Projects } from "./pages";
 
 const App = () => {
+  const activeMenu = true;
   return (
     <div>
-      <h2 className="text-red-500 text-xl">Welcome to React</h2>
+      <BrowserRouter>
+        <div className="flex relative dark:bg-main-dark-bg">
+          {activeMenu ? (
+            <div
+              className="w-72 fixed sidebar
+             dark:bg-secondary-dark-bg
+            bg-white"
+            >
+              <Sidebar />
+            </div>
+          ) : (
+            <div className="w-0 dark:bg-secondary-dark-bg">
+              <Sidebar />
+            </div>
+          )}
+          <div
+            className={`dark:bg-main-bg bg-main-bg
+                min-h-screen w-full ${activeMenu ? " md:ml-72" : "flex-2"}`}
+          >
+            <div className="fixed md:static bg-main-bg dark:bg-main-bg navbar w-full">
+              <Navbar />
+            </div>
+
+            <div>
+              <Routes>
+                {/* Dashboard */}
+
+                <Route path="/" element={<Projects />} />
+                <Route path="/user" element={<User />} />
+                <Route path="/progress" element={<Progress />} />
+                <Route path="/financial" element={<Financial />} />
+              </Routes>
+            </div>
+          </div>
+        </div>
+      </BrowserRouter>
     </div>
   );
 };

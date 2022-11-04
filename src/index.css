@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+@layer components{
+   .brand-logo{
+    @apply h-9 w-9 
+   }
+   .icons{
+      @apply h-5 w-5
+   }
+}
