@@ -12,9 +12,9 @@ const App = () => {
         <div className="flex relative dark:bg-main-dark-bg">
           {activeMenu ? (
             <div
-              className="w-72 fixed sidebar
+              className="w-64 fixed sidebar
              dark:bg-secondary-dark-bg
-            bg-white"
+            bg-white shadow-xl"
             >
               <Sidebar />
             </div>
@@ -24,10 +24,10 @@ const App = () => {
             </div>
           )}
           <div
-            className={`dark:bg-main-bg bg-main-bg
+            className={`dark:bg-main-bg bg-main-bg ml-72 flex-2 flex-wrap
                 min-h-screen w-full ${activeMenu ? " md:ml-72" : "flex-2"}`}
           >
-            <div className="fixed md:static bg-main-bg dark:bg-main-bg navbar w-full">
+            <div className="md:static bg-main-bg dark:bg-main-bg navbar w-full">
               <Navbar />
             </div>
 
@@ -47,5 +47,4 @@ const App = () => {
     </div>
   );
 };
-
 export default App;
