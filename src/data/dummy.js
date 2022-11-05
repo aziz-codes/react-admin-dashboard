@@ -31,7 +31,7 @@ export const links = [
   {
     title: "Community",
     icon: <LightBulbIcon />,
-    path: "/comminity",
+    path: "/community",
   },
   {
     title: "Settings",
