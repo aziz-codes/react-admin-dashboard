@@ -37,7 +37,7 @@ const BottomNavigationBar = () => {
   ];
 
   return (
-    <div className="fixed bottom-0 w-full shadow-xl border h-10 bg-white text-black flex flex-row">
+    <div className="fixed -bottom-0 w-full shadow-xl border h-10 bg-white text-black flex flex-row">
       {links.map((item, index) => (
         <Link
           to={`${item.path}`}
