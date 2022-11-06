@@ -14,13 +14,13 @@ const User = () => {
   }, []);
 
   return (
-    <div className="m-3 flex flex-col flex-wrap">
+    <div className=" flex flex-col flex-wrap items-center">
       <div>
         <h3 className="font-bold text-xl text-sky-500 tracking-tight">
           Our Happy Clients
         </h3>
       </div>
-      <div className="flex flex-row w-full flex-wrap mt-4 gap-4 mx-auto">
+      <div className="flex flex-row w-full flex-wrap mt-4 gap-4 m-auto items-center justify-center">
         {users.map((user, index) => (
           <div
             key={index}
